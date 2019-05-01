@@ -1,0 +1,9 @@
+{
+  "com.antkorwin.heisenbug.taskservice.event.CompleteTaskEvent": [
+    {
+      "id": "bf71b8d4-c22c-4223-82c7-28900aefffff",
+      "estimate": 15,
+      "title": "break the resistance"
+    }
+  ]
+}

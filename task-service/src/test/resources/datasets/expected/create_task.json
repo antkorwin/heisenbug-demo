@@ -1,0 +1,9 @@
+{
+  "task": [
+    {
+      "id": "regex:[0-9A-Za-z]{8}-([0-9A-Za-z]{4}-){3}[0-9A-Za-z]{12}",
+      "estimate": 10,
+      "title": "turn to the dark side"
+    }
+  ]
+}

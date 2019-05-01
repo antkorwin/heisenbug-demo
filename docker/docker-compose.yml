@@ -1,0 +1,30 @@
+version: "3"
+
+services:
+
+  # PostgreSQL
+  postgres_db:
+    image: "postgres:9.6.8"
+    ports:
+      - "54320:5432"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+  # PostgreSQL
+
+  # RabbitMQ
+  rabbitmq:
+    image: "rabbitmq:management"
+    hostname: "rabbit"
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+    labels:
+      NAME: "rabbitmq"
+  # RabbitMQ
+
+  # MongoDB
+  mongo:
+    image: 'mongo:latest'
+    ports:
+      - '27017:27017'
+  # MongoDB

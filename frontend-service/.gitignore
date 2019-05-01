@@ -1,0 +1,41 @@
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# Add any directories, files, or patterns you don't want to be tracked by version control
+**/node_modules/
+**/bower_components/
+**/coverage/
+**/node/
+**/.sass-cache/
+**/.idea/
+**/.tmp/
+**/dist/
+**/npm-debug.log
+**/.DS_Store
+*.iml
+target/
+**/*.log
+**/package-lock.json

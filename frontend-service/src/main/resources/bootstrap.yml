@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: frontend-service
+server:
+  port: ${APP_PORT:80}
+management:
+  security:
+    enabled: false
+  info:
+    git:
+      mode: full
