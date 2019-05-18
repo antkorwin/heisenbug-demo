@@ -28,6 +28,10 @@ export function subtaskCreate(taskId, title, estimate) {
         .then(task => new SubTask(task));
 }
 
+export function taskComplete(taskId) {
+    return axios.post(`${globalConfig.api}task-service/tasks/${taskId}/complete`);
+}
+
 export function tasksList() {
     return axios.get(`${globalConfig.api}task-service/tasks/list`)
         .then(res => res.data)

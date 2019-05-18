@@ -2,7 +2,7 @@ spring:
   application:
     name: frontend-service
 server:
-  port: ${APP_PORT:80}
+  port: ${APP_PORT:8090}
 management:
   security:
     enabled: false

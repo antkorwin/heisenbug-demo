@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { subtasksList, subtaskCreate } from '../../actions/tasksActions';
+import { subtasksList, subtaskCreate, taskComplete } from '../../actions/tasksActions';
 import classnames from 'classnames';
 import { FlexDiv } from 'ws-react-flex-layout';
 import { ESTIMATE_EMOJI } from '../../enums/estimateEmoji';
@@ -108,6 +108,14 @@ export class TaskInfo extends Component {
         return find ? find.emoji : null;
     }
 
+    /**
+     * Завершить задачу
+     */
+    completeTask = () => {
+        taskComplete(this.props.task.id)
+            .then(() => this.props.updateTasksList());
+    }
+
     render() {
         return (
             <React.Fragment>
@@ -177,10 +185,10 @@ export class TaskInfo extends Component {
                             className={classnames(
                                 'button-block'
                             )}
-                            onClick={this.showForm}
+                            onClick={this.completeTask}
                         >
-                            <Button bsStyle="primary" bsSize="large" onClick={this.showForm}>
-                                Create subtask
+                            <Button bsStyle="primary" bsSize="large">
+                                Complete task
                             </Button>
 
                         </FlexDiv>

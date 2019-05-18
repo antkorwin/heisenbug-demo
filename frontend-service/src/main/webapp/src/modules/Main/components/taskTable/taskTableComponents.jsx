@@ -19,7 +19,7 @@ export class TaskTable extends WsReactBaseComponent {
         this.updateTasksList();
     }
 
-    updateTasksList() {
+    updateTasksList = () => {
         tasksList()
             .then(tasks => {
                 this.setState({
@@ -110,6 +110,7 @@ export class TaskTable extends WsReactBaseComponent {
                                     <TaskInfo
                                         key={index}
                                         task={task}
+                                        updateTasksList={this.updateTasksList}
                                     />
                                 )
                             }
